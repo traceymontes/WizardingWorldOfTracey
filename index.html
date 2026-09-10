@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Portal</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <header>
+            <h1>Hogwarts Portal</h1>
+            <p>Welcome to the Wizarding world! Complete the registration or view submitted records</p>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <form action="#" method="POST" id="registrationForm" autocomplete="on">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullname" name="fullName" placeholder="Enter your full name" required
+                                minlength="2" maxlength="60">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Hogwarts Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="yourname@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Telephone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="09123456789" pattern="[0-9]{11}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="At least 8 characters"
+                                required minlength="8">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthday">Birthday:</label>
+                            <input type="date" id="birthday" name="birthday" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" min="0" max="100" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                                <label><input type="radio" name="gender" value="Female"> Female</label>
+                                <label><input type="radio" name="gender" value="Other"> Other</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your home address"
+                                required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Academic and Preferences</legend>
+
+                        <div class="form-group">
+                            <label for="hogwartsHouse">Hogwarts House:</label>
+                            <select id="hogwartsHouse" name="hogwartsHouse" required>
+                                <optgroup label="Houses">
+                                    <option value="" disabled selected>Select your House</option>
+                                    <option value="Hufflepuff">House of Hufflepuff</option>
+                                    <option value="Slytherin">House of Slytherin</option>
+                                    <option value="Gryffindor">House of Gryffindor</option>
+                                    <option value="Ravenclaw">House of Ravenclaw</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="yearLevel">Year level:</label>
+                            <select id="yearLevel" name="yearLevel" required>
+                                <option value="" disabled selected>Select Year</option>
+                                <option value="1">Year 1</option>
+                                <option value="2">Year 2</option>
+                                <option value="3">Year 3</option>
+                                <option value="4">Year 4</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Skills:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="skills" value="Ancient History"> Ancient History</label>
+                                <label><input type="checkbox" name="skills" value="Peace Keeping"> Peace Keeping</label>
+                                <label><input type="checkbox" name="skills" value="Rule Breaking"> Rule Breaking</label>
+                                <label><input type="checkbox" name="skills" value="Potion Making"> Potion Making</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="skillRange">Skills Level (Range):</label>
+                            <input type="range" id="skillRange" name="skillRange" min="1" max="10" value="5">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="favColor">Favorite Color:</label>
+                            <input type="color" id="favColor" name="favColor" value="#000000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profilePic">Hogwarts ID Picture:</label>
+                            <input type="file" id="profilePic" name="profilePic" accept="image/png, image/jpeg" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="portfolio">Website / Portfolio:</label>
+                            <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Additional Comments:</label>
+                            <textarea id="comments" name="comments" rows="2"
+                                placeholder="Any additional notes..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="systemCode">System Code (Read-Only):</label>
+                            <input type="text" id="systemCode" name="systemCode" value="REG-2026-SYS" readonly>
+                        </div>
+                    </fieldset>
+
+                    <div class="button-group">
+                        <button type="submit">Submit Registration</button>
+                        <button type="reset">Reset Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="table-section">
+                <h2>Registered Students Records</h2>
+                <div class="table-container">
+                    <table>
+                        <caption>Table 1.0: Summary of Enrolled Wizards for Current Term</caption>
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Hogwarts Email Address</th>
+                                <th>Hogwarts House & Year</th>
+                                <th>Gender</th>
+                                <th>Skills</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Harry Potter</td>
+                                <td>h.potter@hogwarts.edu</td>
+                                <td rowspan="2">Gryffindor - Year 2</td>
+                                <td>Male</td>
+                                <td>Rule Breaking, Ancient History</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Hermione Granger</td>
+                                <td>h.granger@hogwarts.edu</td>
+                                <td>Female</td>
+                                <td>Ancient History, Potion Making</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Draco Malfoy</td>
+                                <td>d.malfoy@hogwarts.edu</td>
+                                <td>Slytherin - Year 1</td>
+                                <td>Male</td>
+                                <td>Potion Making, Rule Breaking</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Luna Lovegood</td>
+                                <td>l.lovegood@hogwarts.edu</td>
+                                <td colspan="2">Ravenclaw - Year 3</td>
+                                <td>Ancient History</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Diggory</td>
+                                <td>c.diggory@hogwarts.edu</td>
+                                <td>Hufflepuff - Year 4</td>
+                                <td>Male</td>
+                                <td>Peace Keeping</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Ginny Weasley</td>
+                                <td>g.weasley@hogwarts.edu</td>
+                                <td>Gryffindor - Year 2</td>
+                                <td>Female</td>
+                                <td>Rule Breaking</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Severus Snape</td>
+                                <td>s.snape@hogwarts.edu</td>
+                                <td>Slytherin - Year 1</td>
+                                <td>Male</td>
+                                <td>Potion Making</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Cho Chang</td>
+                                <td>c.chang@hogwarts.edu</td>
+                                <td>Ravenclaw - Year 3</td>
+                                <td>Female</td>
+                                <td>Peace Keeping, Ancient History</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Neville Longbottom</td>
+                                <td>n.longbottom@hogwarts.edu</td>
+                                <td>Gryffindor - Year 4</td>
+                                <td>Male</td>
+                                <td>Potion Making</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Susan Bones</td>
+                                <td>s.bones@hogwarts.edu</td>
+                                <td>Hufflepuff - Year 2</td>
+                                <td>Female</td>
+                                <td>Peace Keeping</td>
+                                <td>Active</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">Total Registered Wizards Displayed</td>
+                                <td>10 Records</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

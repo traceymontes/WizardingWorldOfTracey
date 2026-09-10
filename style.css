@@ -1,0 +1,172 @@
+:root {
+    --bg-dark: #0b1329;
+    --parchment: #f4ebd0;
+    --gold: #d4af37;
+    --text-dark: #2c221e;
+    --accent-red: #740001;
+    --accent-green: #1a472a;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 50% 30%, #1a2744 0%, #0b1329 100%);
+    color: var(--text-dark);
+    font-family: 'IM Fell English', serif;
+    font-size: 1.1rem;
+    padding: 20px;
+    min-height: 100vh;
+}
+.page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--parchment);
+    background-image: linear-gradient(rgba(255,255,255,0.4), rgba(0,0,0,0.05));
+    border: 8px double var(--gold);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    padding: 40px;
+    position: relative;
+}
+header {
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    position: relative;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background-image: url('images/hogwarts\ logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: var(--accent-red);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+header p {
+    font-style: italic;
+    color: #554433;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+#registrationForm {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+fieldset {
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+legend {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    background-color: var(--accent-red);
+    color: #f3e5ab;
+    padding: 6px 15px;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+label, legend {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #3b2a1a;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #fdfbf7;
+    border: 1px solid #b5a27a;
+    border-radius: 4px;
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-red);
+    box-shadow: 0 0 5px rgba(116, 0, 1, 0.3);
+}
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+button {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #d4af37, #aa820a);
+    color: #fff;
+    border: 1px solid #705305;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+.table-section {
+    margin-top: 50px;
+    border-top: 3px solid var(--gold);
+    padding-top: 30px;
+}
+.table-section h2 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: var(--accent-red);
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255,255,255,0.7);
+    border: 2px solid var(--gold);
+}
+th, td {
+    border: 1px solid #c9b48c;
+    padding: 10px 12px;
+    text-align: left;
+}
+th {
+    background-color: var(--accent-green);
+    color: #f3e5ab;
+    font-family: 'Cinzel', serif;
+}
+tr:nth-child(even) {
+    background-color: rgba(212, 175, 55, 0.08);
+}
